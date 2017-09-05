@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LiberconMaster.master.cs" Inherits="WebLibercon.LiberconMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="logo">
+        <img src="img/logo.png" id="imgLogo" />
+    </div>
+    <div class="header">
+        Biblioteca Liber-Con
+    </div>
+    <div class="login">
+        <asp:Label ID="lblLogin" runat="server" Text="Bienvenido, Invitado/a"></asp:Label>
+        <br>
+        <asp:HyperLink ID="hplLogin" runat="server">Conectarse</asp:HyperLink> &nbsp <asp:HyperLink ID="hplRegistro" runat="server">Registro</asp:HyperLink>
+    </div>
+    <div class="menu">
+        <a href="inicio.aspx">Inicio</a> &nbsp <a href="coleccion.aspx">Colección</a> &nbsp <a href="prestamos.aspx">Prestamos</a> &nbsp <a href="contacto.aspx">Contacto</a> &nbsp <a href="who.aspx">Quienes Somos</a>
+    </div>
+    <div class="content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="footer">
+        Liber-con - 2017. Todos los derechos reservados.
+    </div>
+    </form>
+</body>
+</html>
