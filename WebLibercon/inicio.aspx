@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
         Bienvenidos a Liber-Con! 
-        <br>
+        <br/>
         Biblioteca disponible para todos.
     </p>
 </asp:Content>

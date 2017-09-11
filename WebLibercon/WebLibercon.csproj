@@ -96,6 +96,7 @@
   <ItemGroup>
     <Content Include="coleccion.aspx" />
     <Content Include="contacto.aspx" />
+    <Content Include="css\Estilo.css" />
     <Content Include="inicio.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -162,9 +163,7 @@
       <DependentUpon>who.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="css\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

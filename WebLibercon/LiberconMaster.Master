@@ -5,14 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Liber-Con</title>
+    <link href="css/Estilo.css" type="text/css" rel="stylesheet"/>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
     <div class="logo">
-        <img src="img/logo.png" id="imgLogo" />
+        <a href="inicio.aspx"><img src="img/logo.png" id="imgLogo" /></a>
     </div>
     <div class="header">
         Biblioteca Liber-Con
@@ -23,9 +24,16 @@
         <asp:HyperLink ID="hplLogin" runat="server">Conectarse</asp:HyperLink> &nbsp <asp:HyperLink ID="hplRegistro" runat="server">Registro</asp:HyperLink>
     </div>
     <div class="menu">
-        <a href="inicio.aspx">Inicio</a> &nbsp <a href="coleccion.aspx">Colección</a> &nbsp <a href="prestamos.aspx">Prestamos</a> &nbsp <a href="contacto.aspx">Contacto</a> &nbsp <a href="who.aspx">Quienes Somos</a>
+        <ul>
+          <li><a href="inicio.aspx">Inicio</a></li>
+          <li><a href="coleccion.aspx">Colección</a></li>
+          <li><a href="prestamos.aspx">Prestamos</a></li>
+          <li><a href="contacto.aspx">Contacto</a></li>
+          <li><a href="who.aspx">Quienes Somos</a></li>
+        </ul>
     </div>
     <div class="content">
+        <br />
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
