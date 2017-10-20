@@ -12,6 +12,6 @@
         <br>
         <asp:Label ID="lblPeriodo" runat="server" Text="Periodo de Prestamo: "></asp:Label>
         <br>
-        <asp:Button ID="btnPedir" runat="server" Text="Pedir" />
+        <asp:Button ID="btnPedir" runat="server" Text="Pedir" OnClick="btnPedir_Click" />
     </div>
 </asp:Content>

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebLibercon", "WebLibercon\WebLibercon.csproj", "{A47E25DF-C728-42E5-A352-E2ABDEFEA848}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libercon.Presentacion", "WebLibercon\Libercon.Presentacion.csproj", "{A47E25DF-C728-42E5-A352-E2ABDEFEA848}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiblioLibercon", "BiblioLibercon\BiblioLibercon.csproj", "{A95195A4-FB36-4D51-9287-6B32CECCDF3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libercon.Negocio", "BiblioLibercon\Libercon.Negocio.csproj", "{A95195A4-FB36-4D51-9287-6B32CECCDF3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libercon.Datos", "Libercon.Datos\Libercon.Datos.csproj", "{CD4C2CAF-336F-41D9-AD6F-07BA26DAB2AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A95195A4-FB36-4D51-9287-6B32CECCDF3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A95195A4-FB36-4D51-9287-6B32CECCDF3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A95195A4-FB36-4D51-9287-6B32CECCDF3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD4C2CAF-336F-41D9-AD6F-07BA26DAB2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4C2CAF-336F-41D9-AD6F-07BA26DAB2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4C2CAF-336F-41D9-AD6F-07BA26DAB2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD4C2CAF-336F-41D9-AD6F-07BA26DAB2AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

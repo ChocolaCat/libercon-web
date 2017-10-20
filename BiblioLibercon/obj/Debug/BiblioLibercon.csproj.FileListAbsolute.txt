@@ -1,0 +1,10 @@
+C:\Users\NIBSA\Desktop\libercon-web\BiblioLibercon\bin\Debug\BiblioLibercon.dll
+C:\Users\NIBSA\Desktop\libercon-web\BiblioLibercon\bin\Debug\BiblioLibercon.pdb
+C:\Users\NIBSA\Desktop\libercon-web\BiblioLibercon\obj\Debug\BiblioLibercon.csprojResolveAssemblyReference.cache
+C:\Users\NIBSA\Desktop\libercon-web\BiblioLibercon\obj\Debug\BiblioLibercon.dll
+C:\Users\NIBSA\Desktop\libercon-web\BiblioLibercon\obj\Debug\BiblioLibercon.pdb
+C:\Users\linf\Desktop\libercon-web\BiblioLibercon\bin\Debug\BiblioLibercon.dll
+C:\Users\linf\Desktop\libercon-web\BiblioLibercon\bin\Debug\BiblioLibercon.pdb
+C:\Users\linf\Desktop\libercon-web\BiblioLibercon\obj\Debug\BiblioLibercon.csprojResolveAssemblyReference.cache
+C:\Users\linf\Desktop\libercon-web\BiblioLibercon\obj\Debug\BiblioLibercon.dll
+C:\Users\linf\Desktop\libercon-web\BiblioLibercon\obj\Debug\BiblioLibercon.pdb

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BiblioLibercon
 {
-    public class Class1
+    public enum CategoriaLibro
     {
+        Novela, Novela_Policiaca, Cuento, Filosofía, Arte
     }
 }

@@ -13,5 +13,10 @@ namespace WebLibercon
         {
 
         }
+
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = args.Value.Length <= 200;
+        }
     }
 }

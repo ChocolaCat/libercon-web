@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="texto">
-        Somos una biblioteca que se propuso presentar una plataforma mas personalizada y tecnologica para
+        Somos una biblioteca que se propuso presentar una plataforma más personalizada y tecnológica para
         ofrecer sus servicios.
     </div>
 </asp:Content>

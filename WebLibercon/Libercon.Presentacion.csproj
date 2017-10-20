@@ -96,7 +96,7 @@
   <ItemGroup>
     <Content Include="coleccion.aspx" />
     <Content Include="contacto.aspx" />
-    <Content Include="css\Estilo.css" />
+    <Content Include="Css\Estilos.css" />
     <Content Include="inicio.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -162,6 +162,12 @@
     <Compile Include="who.aspx.designer.cs">
       <DependentUpon>who.aspx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiblioLibercon\Libercon.Negocio.csproj">
+      <Project>{a95195a4-fb36-4d51-9287-6b32ceccdf3f}</Project>
+      <Name>Libercon.Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

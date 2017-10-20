@@ -13,5 +13,10 @@ namespace WebLibercon
         {
 
         }
+
+        protected void btnPedir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

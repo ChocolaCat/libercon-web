@@ -1,0 +1,56 @@
+﻿
+#header{
+    margin: 3px;
+    padding: 3px;
+    position: absolute;
+    font-size:x-large;
+}
+
+#login {
+    margin: 3px;
+    padding: 3px;
+    position: relative;
+    text-align: right;
+    padding-right: 15px;
+}
+
+#menu {
+    display:table;
+    margin: 0 auto;
+}
+
+ul {
+    background-color: #333;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    text-align:center;
+}
+
+li {
+    float: left;
+    display: inline;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#footer {
+    margin: 3px;
+    padding: 3px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    display: inline;
+    bottom:0;
+}

@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Liber-Con</title>
-    <link href="css/Estilo.css" type="text/css" rel="stylesheet"/>
+    <link href="css/Estilos.css" type="text/css" rel="stylesheet"/>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -15,32 +15,35 @@
     <div class="logo">
         <a href="inicio.aspx"><img src="img/logo.png" id="imgLogo" /></a>
     </div>
-    <div class="header">
-        Biblioteca Liber-Con
+    <div id="top">
+        <div id="header">
+            Biblioteca Liber-Con
+        </div>
+        <div id="login">
+            <asp:Label ID="lblLogin" runat="server" Text="Bienvenido, Invitado/a"></asp:Label>
+            <br/>
+            <asp:HyperLink ID="hplLogin" runat="server">Conectarse</asp:HyperLink> &nbsp <asp:HyperLink ID="hplRegistro" runat="server">Registro</asp:HyperLink>
+        </div>
     </div>
-    <div class="login">
-        <asp:Label ID="lblLogin" runat="server" Text="Bienvenido, Invitado/a"></asp:Label>
-        <br>
-        <asp:HyperLink ID="hplLogin" runat="server">Conectarse</asp:HyperLink> &nbsp <asp:HyperLink ID="hplRegistro" runat="server">Registro</asp:HyperLink>
-    </div>
-    <div class="menu">
+    <div id="divisor"><br /></div>
+    <div id="menu">
         <ul>
           <li><a href="inicio.aspx">Inicio</a></li>
           <li><a href="coleccion.aspx">Colección</a></li>
-          <li><a href="prestamos.aspx">Prestamos</a></li>
+          <li><a href="prestamos.aspx">Préstamos</a></li>
           <li><a href="contacto.aspx">Contacto</a></li>
-          <li><a href="who.aspx">Quienes Somos</a></li>
+          <li><a href="who.aspx">Quiénes Somos</a></li>
         </ul>
     </div>
-    <div class="content">
+    <div id="content">
         <br />
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
-    <div class="footer">
+    <div id="footer">
         Liber-con - 2017. Todos los derechos reservados.
-    </div>
+    <span style="color: rgb(84, 84, 84); font-family: arial, sans-serif; font-size: small; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">®</span></div>
     </form>
 </body>
 </html>
