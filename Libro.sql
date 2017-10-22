@@ -1,6 +1,10 @@
-DROP TABLE `Libercon`;
-
-CREATE TABLE `Libercon` (
+IF EXISTS(SELECT 1 FROM sys.tables WHERE object_id = OBJECT_ID('Libro'))
+BEGIN;
+    DROP TABLE Libro;
+END;
+GO
+/*
+CREATE TABLE [Libercon] (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
   `Autor` varchar(255) default NULL,
   `Titulo` TEXT default NULL,
@@ -8,7 +12,18 @@ CREATE TABLE `Libercon` (
   `Categoria` varchar(255) default NULL,
   PRIMARY KEY (`id`)
 ) AUTO_INCREMENT=1;
+*/
 
+CREATE TABLE [Libro] (
+    [Id] INTEGER NOT NULL IDENTITY(1, 1),
+    [Autor] VARCHAR(225) NULL,
+    [Titulo] VARCHAR(50) NULL,
+    [Editorial] VARCHAR(255) NULL,
+    [Categoria] VARCHAR(255) NULL,
+    PRIMARY KEY ([Id])
+);
+GO
+/*
 INSERT INTO `Libercon` (`Autor`,`Titulo`,`Editorial`,`Categoria`) VALUES ("Ignatius X. Bailey","Maecenas ornare","Smart","Asset Management"),("Hollee W. Vargas","dignissim lacus. Aliquam","Toyota","Tech Support"),("Nyssa X. Norton","amet","Chevrolet","Payroll"),("Colt R. Bryant","ultricies ligula. Nullam","Kia Motors","Finances"),("Pandora E. Shields","enim, sit","Chrysler","Asset Management"),("Rowan I. Fowler","sed, facilisis vitae,","Kia Motors","Media Relations"),("Miranda L. Vance","malesuada","Daimler","Finances"),("Devin N. Stout","ligula. Aenean euismod","Buick","Customer Service"),("Maryam J. Buck","Vestibulum accumsan","JLR","Finances"),("Ivory Q. Rogers","primis in","Tata Motors","Asset Management");
 INSERT INTO `Libercon` (`Autor`,`Titulo`,`Editorial`,`Categoria`) VALUES ("Patience B. Singleton","nisi nibh lacinia","GMC","Payroll"),("Cedric F. Riggs","id, blandit","Smart","Customer Relations"),("Cameran V. May","gravida non, sollicitudin","Seat","Finances"),("Elvis D. Potts","malesuada. Integer id","FAW","Payroll"),("Jack L. Soto","urna justo","Tata Motors","Tech Support"),("Tatum V. Tillman","Sed et","Infiniti","Tech Support"),("Paul Z. Mejia","fringilla cursus","Kenworth","Research and Development"),("Edan P. Aguirre","eleifend egestas. Sed","Hyundai Motors","Public Relations"),("Yolanda E. George","Sed nunc est,","Mercedes-Benz","Tech Support"),("Robin X. Prince","enim, condimentum eget,","Kia Motors","Customer Relations");
 INSERT INTO `Libercon` (`Autor`,`Titulo`,`Editorial`,`Categoria`) VALUES ("Cora J. Conley","ac mi","Daihatsu","Advertising"),("Galvin X. Harrell","eu","Nissan","Customer Service"),("Medge B. Sykes","eleifend egestas.","Dacia","Finances"),("Kaden E. Suarez","dictum placerat,","Dodge","Media Relations"),("Lawrence G. Juarez","semper","Nissan","Asset Management"),("Kimberley Z. Ruiz","vel, mauris. Integer","Mitsubishi Motors","Sales and Marketing"),("Knox I. Dixon","eu,","Tata Motors","Media Relations"),("Denise V. Lott","non,","Volkswagen","Asset Management"),("Colette P. Irwin","Cras sed","Smart","Sales and Marketing"),("Aspen J. Marsh","purus sapien,","Porsche","Finances");
@@ -19,3 +34,4 @@ INSERT INTO `Libercon` (`Autor`,`Titulo`,`Editorial`,`Categoria`) VALUES ("Shad 
 INSERT INTO `Libercon` (`Autor`,`Titulo`,`Editorial`,`Categoria`) VALUES ("Nola I. Clements","a, aliquet","General Motors","Legal Department"),("Janna Z. Britt","dis","RAM Trucks","Sales and Marketing"),("Wang Q. Talley","Cras convallis","Toyota","Payroll"),("Elliott X. Boyle","dapibus id,","Volvo","Human Resources"),("Lucius X. Levy","velit dui,","Lexus","Sales and Marketing"),("Uriah Y. Oneill","mauris sit","Chevrolet","Asset Management"),("Winter L. Sanders","scelerisque","Volvo","Customer Relations"),("Camille A. Daniels","purus.","Porsche","Advertising"),("Wing I. Winters","ut","Mahindra and Mahindra","Customer Relations"),("Quintessa X. Castillo","molestie. Sed id","Hyundai Motors","Research and Development");
 INSERT INTO `Libercon` (`Autor`,`Titulo`,`Editorial`,`Categoria`) VALUES ("Kaitlin P. Mathews","ante blandit","Mahindra and Mahindra","Research and Development"),("Oren D. Underwood","dui augue","MINI","Asset Management"),("Nash P. Daugherty","Class","Seat","Human Resources"),("Dahlia L. Bradford","mauris erat eget","Mercedes-Benz","Asset Management"),("Jocelyn K. Fleming","sagittis.","Nissan","Sales and Marketing"),("Lydia O. Newton","mi.","Daimler","Legal Department"),("Trevor F. Humphrey","morbi tristique senectus","Subaru","Public Relations"),("Armand C. Duncan","ornare, facilisis","Honda","Payroll"),("Deacon C. Haley","arcu.","Hyundai Motors","Asset Management"),("Chancellor X. Noble","erat nonummy ultricies","Seat","Media Relations");
 INSERT INTO `Libercon` (`Autor`,`Titulo`,`Editorial`,`Categoria`) VALUES ("Sharon Y. Guerrero","ac mattis","Ford","Sales and Marketing"),("Jorden P. Valentine","magna","Infiniti","Media Relations"),("Amber W. Mendez","nec enim. Nunc","BMW","Customer Service"),("Jada Q. Fischer","Nam consequat","BMW","Human Resources"),("Adara F. Watts","erat. Vivamus","Mahindra and Mahindra","Advertising"),("Karly E. Jacobson","Praesent","Honda","Tech Support"),("Dean X. Morton","et","Chrysler","Finances"),("Melissa Y. Potts","diam eu","GMC","Customer Service"),("Karleigh C. Pruitt","malesuada","GMC","Public Relations"),("Germane C. Jacobs","rutrum","Volvo","Quality Assurance");
+*/
