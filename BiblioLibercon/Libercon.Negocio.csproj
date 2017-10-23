@@ -49,8 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coleccion.cs" />
+    <Compile Include="Conexion.cs" />
     <Compile Include="Enumerador.cs" />
     <Compile Include="Libro.cs" />
+    <Compile Include="Prestamo.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

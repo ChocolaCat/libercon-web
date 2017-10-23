@@ -34,12 +34,15 @@ BEGIN;
 END;
 GO
 
+alter table Libro add Estado VARCHAR(3) null;
+
 CREATE TABLE [Libro] (
     [IdLibro] INTEGER NOT NULL IDENTITY(1, 1),
     [Autor] VARCHAR(225) NULL,
     [Titulo] VARCHAR(50) NULL,
     [Editorial] VARCHAR(255) NULL,
     [Categoria] VARCHAR(255) NULL,
+	[Estado] VARCHAR(3) NULL,
     PRIMARY KEY ([IdLibro])
 );
 GO

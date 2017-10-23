@@ -7,11 +7,12 @@
     </div>
     <div class="formulario">
         <asp:Label ID="lblCategoria" runat="server" Text="Categoría:"></asp:Label> <asp:DropDownList ID="ddlCategoria" runat="server"></asp:DropDownList>
-        <br>
+        <br/>
         <asp:Label ID="lblLibro" runat="server" Text="Libro:"></asp:Label> <asp:DropDownList ID="ddlLibro" runat="server"></asp:DropDownList>
-        <br>
+        <br/>
         <asp:Label ID="lblPeriodo" runat="server" Text="Periodo de Prestamo: "></asp:Label>
-        <br>
+        &nbsp;<asp:Label ID="lblPeriodoPrestamo" runat="server"></asp:Label>
+        <br/>
         <asp:Button ID="btnPedir" runat="server" Text="Pedir" OnClick="btnPedir_Click" />
     </div>
 </asp:Content>

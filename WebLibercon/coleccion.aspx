@@ -3,14 +3,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="DDL">
-        <asp:DropDownList ID="ddlCategoria" runat="server">
-        </asp:DropDownList>
     </div>
     <div class="galeria">
         <asp:Image ID="img1" runat="server" />
         <asp:Image ID="img2" runat="server" />
         <asp:Image ID="img3" runat="server" />
-        <br>
+        <br/>
         <asp:Image ID="img4" runat="server" />
         <asp:Image ID="img5" runat="server" />
         <asp:Image ID="img6" runat="server" />

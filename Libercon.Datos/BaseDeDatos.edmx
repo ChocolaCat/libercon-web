@@ -14,6 +14,7 @@
           <Property Name="Titulo" Type="varchar" MaxLength="50" />
           <Property Name="Editorial" Type="varchar" MaxLength="255" />
           <Property Name="Categoria" Type="varchar" MaxLength="255" />
+          <Property Name="Estado" Type="varchar" MaxLength="3" />
         </EntityType>
         <EntityType Name="Prestamo">
           <Key>
@@ -36,7 +37,7 @@
           <Property Name="Correo" Type="varchar" MaxLength="255" />
           <Property Name="Telefono" Type="varchar" MaxLength="100" />
         </EntityType>
-        <Association Name="FK__Prestamo__IdLibr__145C0A3F">
+        <Association Name="FK__Prestamo__IdLibr__5EBF139D">
           <End Role="Libro" Type="Self.Libro" Multiplicity="1" />
           <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -48,7 +49,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Prestamo__Usuari__15502E78">
+        <Association Name="FK__Prestamo__Usuari__5FB337D6">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
           <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -64,11 +65,11 @@
           <EntitySet Name="Libro" EntityType="Self.Libro" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Prestamo" EntityType="Self.Prestamo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Prestamo__IdLibr__145C0A3F" Association="Self.FK__Prestamo__IdLibr__145C0A3F">
+          <AssociationSet Name="FK__Prestamo__IdLibr__5EBF139D" Association="Self.FK__Prestamo__IdLibr__5EBF139D">
             <End Role="Libro" EntitySet="Libro" />
             <End Role="Prestamo" EntitySet="Prestamo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Prestamo__Usuari__15502E78" Association="Self.FK__Prestamo__Usuari__15502E78">
+          <AssociationSet Name="FK__Prestamo__Usuari__5FB337D6" Association="Self.FK__Prestamo__Usuari__5FB337D6">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Prestamo" EntitySet="Prestamo" />
           </AssociationSet>
@@ -87,7 +88,8 @@
           <Property Name="Titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Editorial" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Categoria" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__IdLibr__145C0A3F" FromRole="Libro" ToRole="Prestamo" />
+          <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__IdLibr__5EBF139D" FromRole="Libro" ToRole="Prestamo" />
         </EntityType>
         <EntityType Name="Prestamo">
           <Key>
@@ -98,8 +100,8 @@
           <Property Name="Titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdLibro" Type="Int32" Nullable="false" />
           <Property Name="UsuarioId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Libro" Relationship="Self.FK__Prestamo__IdLibr__145C0A3F" FromRole="Prestamo" ToRole="Libro" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Prestamo__Usuari__15502E78" FromRole="Prestamo" ToRole="Usuario" />
+          <NavigationProperty Name="Libro" Relationship="Self.FK__Prestamo__IdLibr__5EBF139D" FromRole="Prestamo" ToRole="Libro" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Prestamo__Usuari__5FB337D6" FromRole="Prestamo" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -111,9 +113,9 @@
           <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Correo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Telefono" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__Usuari__15502E78" FromRole="Usuario" ToRole="Prestamo" />
+          <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__Usuari__5FB337D6" FromRole="Usuario" ToRole="Prestamo" />
         </EntityType>
-        <Association Name="FK__Prestamo__IdLibr__145C0A3F">
+        <Association Name="FK__Prestamo__IdLibr__5EBF139D">
           <End Role="Libro" Type="Self.Libro" Multiplicity="1" />
           <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -125,7 +127,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Prestamo__Usuari__15502E78">
+        <Association Name="FK__Prestamo__Usuari__5FB337D6">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
           <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -141,11 +143,11 @@
           <EntitySet Name="Libro" EntityType="Self.Libro" />
           <EntitySet Name="Prestamo" EntityType="Self.Prestamo" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
-          <AssociationSet Name="FK__Prestamo__IdLibr__145C0A3F" Association="Self.FK__Prestamo__IdLibr__145C0A3F">
+          <AssociationSet Name="FK__Prestamo__IdLibr__5EBF139D" Association="Self.FK__Prestamo__IdLibr__5EBF139D">
             <End Role="Libro" EntitySet="Libro" />
             <End Role="Prestamo" EntitySet="Prestamo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Prestamo__Usuari__15502E78" Association="Self.FK__Prestamo__Usuari__15502E78">
+          <AssociationSet Name="FK__Prestamo__Usuari__5FB337D6" Association="Self.FK__Prestamo__Usuari__5FB337D6">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Prestamo" EntitySet="Prestamo" />
           </AssociationSet>
@@ -164,6 +166,7 @@
                 <ScalarProperty Name="Titulo" ColumnName="Titulo" />
                 <ScalarProperty Name="Editorial" ColumnName="Editorial" />
                 <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

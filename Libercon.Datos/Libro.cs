@@ -25,6 +25,7 @@ namespace Libercon.Datos
         public string Titulo { get; set; }
         public string Editorial { get; set; }
         public string Categoria { get; set; }
+        public string Estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Prestamo> Prestamo { get; set; }

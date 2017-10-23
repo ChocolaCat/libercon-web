@@ -8,6 +8,6 @@ namespace BiblioLibercon
 {
     public enum CategoriaLibro
     {
-        Novela, Novela_Policiaca, Cuento, Filosofía, Arte
+        Novela, Cuento, Filosofía, Arte
     }
 }

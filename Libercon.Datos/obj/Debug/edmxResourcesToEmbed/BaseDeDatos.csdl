@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Liber_ConModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Libro">
+    <Key>
+      <PropertyRef Name="IdLibro" />
+    </Key>
+    <Property Name="IdLibro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Autor" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+    <Property Name="Titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Editorial" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Categoria" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__IdLibr__5EBF139D" FromRole="Libro" ToRole="Prestamo" />
+  </EntityType>
+  <EntityType Name="Prestamo">
+    <Key>
+      <PropertyRef Name="IdPrestamo" />
+    </Key>
+    <Property Name="IdPrestamo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdLibro" Type="Int32" Nullable="false" />
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Libro" Relationship="Self.FK__Prestamo__IdLibr__5EBF139D" FromRole="Prestamo" ToRole="Libro" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Prestamo__Usuari__5FB337D6" FromRole="Prestamo" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+    </Key>
+    <Property Name="UsuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Rut" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Dv" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__Usuari__5FB337D6" FromRole="Usuario" ToRole="Prestamo" />
+  </EntityType>
+  <Association Name="FK__Prestamo__IdLibr__5EBF139D">
+    <End Role="Libro" Type="Self.Libro" Multiplicity="1" />
+    <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libro">
+        <PropertyRef Name="IdLibro" />
+      </Principal>
+      <Dependent Role="Prestamo">
+        <PropertyRef Name="IdLibro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamo__Usuari__5FB337D6">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="Prestamo">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Liber_ConEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Libro" EntityType="Self.Libro" />
+    <EntitySet Name="Prestamo" EntityType="Self.Prestamo" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK__Prestamo__IdLibr__5EBF139D" Association="Self.FK__Prestamo__IdLibr__5EBF139D">
+      <End Role="Libro" EntitySet="Libro" />
+      <End Role="Prestamo" EntitySet="Prestamo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamo__Usuari__5FB337D6" Association="Self.FK__Prestamo__Usuari__5FB337D6">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Prestamo" EntitySet="Prestamo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Liber_ConModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Libro">
+    <Key>
+      <PropertyRef Name="IdLibro" />
+    </Key>
+    <Property Name="IdLibro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Autor" Type="varchar" MaxLength="225" />
+    <Property Name="Titulo" Type="varchar" MaxLength="50" />
+    <Property Name="Editorial" Type="varchar" MaxLength="255" />
+    <Property Name="Categoria" Type="varchar" MaxLength="255" />
+    <Property Name="Estado" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Prestamo">
+    <Key>
+      <PropertyRef Name="IdPrestamo" />
+    </Key>
+    <Property Name="IdPrestamo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="50" />
+    <Property Name="IdLibro" Type="int" Nullable="false" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+    </Key>
+    <Property Name="UsuarioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Rut" Type="varchar" MaxLength="15" />
+    <Property Name="Dv" Type="varchar" MaxLength="15" />
+    <Property Name="Nombre" Type="varchar" MaxLength="255" />
+    <Property Name="Correo" Type="varchar" MaxLength="255" />
+    <Property Name="Telefono" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__Prestamo__IdLibr__5EBF139D">
+    <End Role="Libro" Type="Self.Libro" Multiplicity="1" />
+    <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libro">
+        <PropertyRef Name="IdLibro" />
+      </Principal>
+      <Dependent Role="Prestamo">
+        <PropertyRef Name="IdLibro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamo__Usuari__5FB337D6">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="Prestamo">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Liber_ConModelStoreContainer">
+    <EntitySet Name="Libro" EntityType="Self.Libro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Prestamo" EntityType="Self.Prestamo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Prestamo__IdLibr__5EBF139D" Association="Self.FK__Prestamo__IdLibr__5EBF139D">
+      <End Role="Libro" EntitySet="Libro" />
+      <End Role="Prestamo" EntitySet="Prestamo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamo__Usuari__5FB337D6" Association="Self.FK__Prestamo__Usuari__5FB337D6">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Prestamo" EntitySet="Prestamo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

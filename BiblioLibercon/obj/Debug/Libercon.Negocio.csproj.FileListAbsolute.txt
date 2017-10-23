@@ -1,0 +1,12 @@
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\bin\Debug\BiblioLibercon.dll.config
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\bin\Debug\BiblioLibercon.dll
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\bin\Debug\BiblioLibercon.pdb
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\bin\Debug\EntityFramework.dll
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\bin\Debug\Libercon.Datos.dll
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\bin\Debug\Libercon.Datos.pdb
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\bin\Debug\EntityFramework.xml
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\obj\Debug\Libercon.Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\obj\Debug\BiblioLibercon.dll
+C:\Users\Nibsa\Downloads\Rar's\Proyecto\libercon-web\BiblioLibercon\obj\Debug\BiblioLibercon.pdb

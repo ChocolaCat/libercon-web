@@ -12,6 +12,23 @@ namespace BiblioLibercon
         private string _titulo;
         private string _editorial;
         private string _categoria;
+        private int _idLibro;
+        private string _estado;
+
+        public string Estado
+        {
+            get { return _estado; }
+            set { _estado = value; }
+        }
+
+
+        public int IdLibro
+        {
+            get { return _idLibro; }
+            set { _idLibro = value; }
+        }
+
+
 
         public string Categoria
         {
@@ -46,23 +63,107 @@ namespace BiblioLibercon
 
         private void Init()
         {
+            _idLibro = 0;
             _autor = "";
             _editorial = "";
             _titulo = "";
             _categoria = CategoriaLibro.Novela.ToString();
+            _estado = "";
+
         }
 
-        public Libro(string _autor, string _titulo, string _editorial, string _categoria)
+        public Libro(string _autor, string _titulo, string _editorial, string _categoria, int _idLibro, string _estado)
         {
             this._autor = _autor;
             this._titulo = _titulo;
             this._editorial = _editorial;
             this._categoria = _categoria;
+            this._idLibro = _idLibro;
+            this._estado = _estado;
         }
 
         public override string ToString()
         {
-            return "Título: " + Titulo + ". Autor: " + Autor + ". Editorial: " + Editorial + ". Categoría: " + Categoria + ".";
+            return "Id: " + IdLibro + ". Título: " + Titulo + ". Autor: " + Autor + ". Editorial: " + Editorial + ". Categoría: " + Categoria + ". Estado: " + Estado + ".";
+        }
+
+        public bool Create()
+        {
+            try
+            {
+                Libercon.Datos.Libro lib = new Libercon.Datos.Libro()
+                {
+                    IdLibro = IdLibro,
+                    Autor = Autor,
+                    Editorial = Editorial,
+                    Categoria = Categoria,
+                    Titulo = Titulo,
+                    Estado = Estado
+
+                };
+                Conexion.LiberEntities.Libro.Add(lib);
+                Conexion.LiberEntities.SaveChanges();
+                return true;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool Read()
+        {
+            try
+            {
+                Libercon.Datos.Libro lib = Conexion.LiberEntities.Libro.First(n => n.IdLibro == IdLibro);
+                IdLibro = lib.IdLibro;
+                Autor = lib.Autor;
+                Categoria = lib.Categoria;
+                Titulo = lib.Titulo;
+                Editorial = lib.Editorial;
+                Estado = lib.Estado;
+                return true;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool Update()
+        {
+            try
+            {
+                Libercon.Datos.Libro lib = Conexion.LiberEntities.Libro.First(n => n.IdLibro == IdLibro);
+                lib.Autor = Autor;
+                lib.Editorial = Editorial;
+                lib.IdLibro = IdLibro;
+                lib.Titulo = Titulo;
+                lib.Categoria = Categoria;
+                lib.Estado = Estado;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool Delete()
+        {
+            try
+            {
+                Libercon.Datos.Libro lib = Conexion.LiberEntities.Libro.First(a => a.IdLibro == IdLibro);
+                Conexion.LiberEntities.Libro.Remove(lib);
+                Conexion.LiberEntities.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

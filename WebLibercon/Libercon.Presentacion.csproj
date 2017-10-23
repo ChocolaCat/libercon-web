@@ -105,6 +105,7 @@
     <Content Include="coleccion.aspx" />
     <Content Include="contacto.aspx" />
     <Content Include="Css\Estilos.css" />
+    <Content Include="img\biblioteca.jpg" />
     <Content Include="inicio.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -118,6 +119,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\logo.png" />
@@ -175,6 +177,10 @@
     <ProjectReference Include="..\BiblioLibercon\Libercon.Negocio.csproj">
       <Project>{a95195a4-fb36-4d51-9287-6b32ceccdf3f}</Project>
       <Name>Libercon.Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libercon.Datos\Libercon.Datos.csproj">
+      <Project>{cd4c2caf-336f-41d9-ad6f-07ba26dab2ae}</Project>
+      <Name>Libercon.Datos</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
